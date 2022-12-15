@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calender</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="render()">
+    <div id="wrapper">
+    <div class="container">
+        <div class="calender">
+            <div id="months">
+                <div id="prev" onclick="button('prev')"><h1>&#8592</h1></div>
+                <div>
+                    <h2 id="mon">June</h2>
+                    <p id="fulldate"></p>
+                </div>
+                <div id="next" onclick="button('next')"><h1>&#8594</h1></div>
+            </div>
+            <div id="weekdays">
+                <div>SUN</div>
+                <div>MON</div>
+                <div>TUE</div>
+                <div>WED</div>
+                <div>THU</div>
+                <div>FRI</div>
+                <div>SAT</div>
+            </div>
+            <div id="days">
+
+            </div>
+        </div>
+        
+    </div>
+    </div>
+    <script src="script1.js"></script>
+</body>
+</html>

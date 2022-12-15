@@ -1,0 +1,85 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+#wrapper{
+    display: flex;
+    justify-content: center;
+   
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 22rem;
+    height: 20rem;
+    background: rgb(223, 223, 223);
+    box-shadow: 1px 1px 12px 1px rgb(208 200 200);
+}
+.calender{
+    width: 100%;
+}
+
+#months{
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(114, 187, 108);
+    padding: 1rem 0;
+    text-align: center;
+
+}
+#weekdays{
+    display: flex;
+    /* align-items: center;
+    justify-content: space-between; */
+    
+    background-color: rgb(93, 161, 87);
+    box-shadow: 1px 1px 2px 0.2px;
+    padding: 0.5rem 0;
+    color: white;
+}
+#weekdays div ,#days div{
+    width: 3.1428rem;
+    text-align: center;
+}
+#days{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;  
+}
+#days div{
+  padding: 0.5rem;
+  transition: all 0.4s; 
+  cursor: pointer;
+}
+.today{
+    background-color: rgb(93, 161, 87);
+    color: white;
+}
+#days div:hover{
+    background-color: rgb(214, 208, 208);
+}
+.prevdates{
+    color: rgb(181, 183, 183);
+}
+#next , #prev{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(47, 37, 37, 0.2);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0.5rem;
+    transition: all 0.3s;
+}
+#next:hover, #prev:hover{
+    background-color: rgb(37, 109, 60);
+    cursor: pointer;
+}

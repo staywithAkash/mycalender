@@ -7,13 +7,15 @@ function render() {
   console.log(d2);
   let d3 = date1.getMonth();
   //last date of current month
-  let lastdate = new Date(date1.getFullYear(), date1.getMonth(), 0);
+  // let lastdate = new Date(date1.getFullYear(), date1.getMonth(), 0);
+  let lastdate = new Date(2022, d3+1, 0);
   let endDate = lastdate.getDate();
+  console.log("endDate"+endDate);
   console.log(endDate);
   //last date of previous month
-  let prevmonth = new Date(date1.getFullYear(), date1.getMonth() - 1, 0);
+  let prevmonth = new Date(2022, (d3-1)+1, 0);
   let prev = prevmonth.getDate();
-  console.log(prev);
+  console.log("prev"+prev);
   //days array
   let weekdays = [
     "Sunday",
@@ -49,6 +51,7 @@ function render() {
     addEl += "<div class='prevdates'>" + i + "</div>";
   }
   //add cur month dates in calender
+  console.log("end date cur month"+endDate);
   for (let i = 1; i <= endDate; i++) {
     if (i == today.getDate() && today.getMonth() == d3) {
       addEl += "<div class='today'>" + d1 + "</div>";

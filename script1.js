@@ -4,16 +4,21 @@ function render() {
   let today = new Date();
   let d1 = date1.getDate();
   let d2 = date1.getDay();
+  let d4=date1.getFullYear();
+  
   console.log(d2);
   let d3 = date1.getMonth();
   //last date of current month
   // let lastdate = new Date(date1.getFullYear(), date1.getMonth(), 0);
-  let lastdate = new Date(2022, d3+1, 0);
+  let lastdate = new Date(d4, d3+1, 0);
   let endDate = lastdate.getDate();
   console.log("endDate"+endDate);
   console.log(endDate);
+  // get first day
+  let startDay= new Date(d4,d3,1).getDay();
+  console.log("first day"+startDay);
   //last date of previous month
-  let prevmonth = new Date(2022, (d3-1)+1, 0);
+  let prevmonth = new Date(d4, (d3-1)+1, 0);
   let prev = prevmonth.getDate();
   console.log("prev"+prev);
   //days array
@@ -47,15 +52,16 @@ function render() {
   let day = document.getElementById("days");
   let addEl = "";
   //add prev month date
-  for (let i = prev - d2 + 1; i <= prev; i++) {
+  for (let i = prev - startDay + 1; i <= prev; i++) {
     addEl += "<div class='prevdates'>" + i + "</div>";
   }
   //add cur month dates in calender
   console.log("end date cur month"+endDate);
   for (let i = 1; i <= endDate; i++) {
-    if (i == today.getDate() && today.getMonth() == d3) {
+    if (i == today.getDate() && today.getMonth() == d3 && today.getFullYear()==d4) {
       addEl += "<div class='today'>" + d1 + "</div>";
-    } else {
+    } 
+    else {
       addEl += "<div>" + i + "</div>";
     }
   }

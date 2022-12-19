@@ -62,6 +62,10 @@
     background-color: rgb(93, 161, 87);
     color: white;
 }
+#sunday{
+    background-color: red;
+    padding: 0px;
+}
 #days div:hover{
     background-color: rgb(214, 208, 208);
 }
